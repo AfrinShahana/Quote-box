@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Assignment 2: JavaScript Programming</h1>
+
+    <!--Quote Box Start-->
+    <section class="quote">
+      <h2>Quote Box</h2>
+
+      <div class="quobox" id="colorchange">
+        <p>True wisdom comes not from knowledge, but from understanding.</p>
+      </div>
+
+      <!--Click Button Start-->
+      <div class="button">
+        <!--Button 1-->
+        <br />
+        <button class="butn1" type="button" onclick="changeStyle()">
+          Click Me For Color Change
+        </button>
+        <script>
+          function changeStyle() {
+            var element = document.getElementById("colorchange");
+            element.style.backgroundColor = "#76EF00";
+            element.style.color = "#040301";
+            element.style.border = "5px solid gray";
+          }
+        </script>
+        <br />
+        <br />
+
+        <!--Button 2-->
+        <button class="butn2" type="button" onclick="changeStyle1()">
+          Click Me For Color Change
+        </button>
+        <script>
+          function changeStyle1() {
+            var element = document.getElementById("colorchange");
+            element.style.backgroundColor = "#1A9FE4";
+            element.style.color = "#DCDEE1";
+            // element.style.border = "5px solid #F20000";
+            element.style.border = "5px solid gray";
+          }
+        </script>
+        <br />
+        <br />
+
+        <!--Button 3-->
+        <button class="butn3" type="button" onclick="changeStyle2()">
+          Click Me For Color Change
+        </button>
+        <script>
+          function changeStyle2() {
+            var element = document.getElementById("colorchange");
+            element.style.backgroundColor = "#F25A1D";
+            element.style.color = "#040301";
+            element.style.border = "5px solid gray";
+          }
+        </script>
+        <br />
+        <br />
+
+        <!--Button 4-->
+        <button class="butn4" type="button" onclick="changeStyle3()">
+          Click Me For Color Change
+        </button>
+        <script>
+          function changeStyle3() {
+            var element = document.getElementById("colorchange");
+            element.style.backgroundColor = "#F20000";
+            element.style.color = "#DCDEE1";
+            element.style.border = "5px solid gray";
+          }
+        </script>
+      </div>
+      <!--Click Button End-->
+    </section>
+    <!--Quote Box End-->
+
+    <!--Hero Converter Start-->
+    <section class="convertar">
+      <div class="conv">
+        <h2>Hero Converter</h2>
+        <label for="convertar">Choose a Option:</label>
+
+        <select name="convertar" id="convertar">
+          <option value="Kilograms">Kilograms To Pound</option>
+          <option value="Pornds">Pornds To Kilograms</option>
+        </select>
+        <br /><br />
+        <label for="number">Inpuit a Number:</label>
+        <input type="number" id="numb" value="0" name="numb" /><br />
+        <button onclick="myFunction()">Submit</button>
+        <p>Result : <span id="output"> </span></p>
+        <br />
+      </div>
+      <script>
+        console.log("Average grade: ");
+        console.log(collection);
+        console.log(val);
+        console.log(collection === "Kilograms");
+
+        function myFunction() {
+          const collection = document.getElementById("convertar").value;
+          var val = document.getElementById("numb").value;
+
+          //Code test
+          //console.log("Average grade: ");
+          //console.log(collection);
+          //console.log(val);
+          //console.log(collection === "Kilograms");
+
+          if (collection === "Kilograms") {
+            document.getElementById("output").innerHTML = val / 2.2046;
+          } else {
+            document.getElementById("output").innerHTML = val / 0.4536;
+          }
+        }
+      </script>
+    </section>
+    <!--Hero Converter End-->
+
+    <!--Hero Converter Min Max Start-->
+    <section class="minmax">
+      <div class="minmaxsum">
+        <h2>Max, Min, Sum, Average & Reverse</h2>
+
+        <!--Take Input-->
+        <label for="numbseries">Inpuit a Series of Number:</label>
+        <input type="text" id="innumb" placeholder="1,2,3" />
+
+        <!--Show Output-->
+
+        <p>MAX :</p>
+        <p id="max">_____</p>
+        <p>MIN :</p>
+        <p id="min">_____</p>
+        <p>SUM :</p>
+        <p id="sum">_____</p>
+        <p>AVERAGE :</p>
+        <p id="avg">_____</p>
+        <p>REVERSE :</p>
+        <p id="rev">_____</p>
+
+        <!--JS Logic-->
+        <script>
+          const chg = document.getElementById("innumb");
+
+          chg.addEventListener("input", chnage);
+
+          function chnage(e) {
+            //Take input and convert in to array
+            var calcvalue = document.getElementById("innumb").value;
+            calcvalue = calcvalue.replace(/\s+/g, "");
+            let calculateArray = calcvalue.split(",");
+            calculateArray = calculateArray.filter((n) => n);
+
+            //Call Functions
+            console.log(Math.max(...calculateArray));
+            document.getElementById("max").innerHTML = Math.max(
+              ...calculateArray
+            );
+
+            console.log(Math.min(...calculateArray));
+            document.getElementById("min").innerHTML = Math.min(
+              ...calculateArray
+            );
+
+            console.log(sum(calculateArray));
+            document.getElementById("sum").innerHTML = sum(calculateArray);
+
+            console.log(avg(calculateArray));
+            document.getElementById("avg").innerHTML = avg(calculateArray);
+
+            console.log(calculateArray.reverse());
+            rev(calculateArray);
+          }
+
+          //sum
+          function sum(calculateArray) {
+            var sum = 0;
+            for (var i = 0; i < calculateArray.length; i++) {
+              sum += parseFloat(calculateArray[i]);
+            }
+            return sum;
+          }
+
+          //Average
+          function avg(calculateArray) {
+            var sum = 0;
+            for (var i = 0; i < calculateArray.length; i++) {
+              sum += parseFloat(calculateArray[i]);
+            }
+            return sum / calculateArray.length;
+          }
+
+          //Revarse
+          function rev(calculateArray) {
+            calculateArray.reverse();
+            for (var i = 0; i < calculateArray.length; i++) {
+              calculateArray[i] = ` ${calculateArray[i]}`;
+            }
+            document.getElementById("rev").innerHTML = calculateArray;
+          }
+        </script>
+      </div>
+    </section>
+    <!--Hero Converter Min Max End-->
+
+    <!--Hero Converter Magic Start-->
+    <section class="magic">
+      <div class="magicbox">
+        <h2 style="background-color: gray;">Magic!: Box</h2>
+        <textarea id="magic-input" rows="11"></textarea>
+      </div>
+
+      <!--Buttons-->
+      <div class="functionbutton">
+        <button style="color: red; background-color: rgb(110, 196, 253); border: 3px solid gray; border-radius: 10px; margin: 1px; padding: 8px; font-weight: bolder ;" class="clear" type="button" onclick="clearit()">
+          Clear IT
+        </button>
+
+        <button style="color: red;background-color: rgb(110, 196, 253); border: 3px solid gray; border-radius: 10px; margin: 1px; padding: 8px; font-weight: bolder ;" class="capitalze" type="button" onclick="capitalze()">
+          Capitalze
+        </button>
+
+        <button style="color: red;background-color: rgb(110, 196, 253); border: 3px solid gray; border-radius: 10px; margin: 1px; padding: 8px; font-weight: bolder ;" class="sort" type="button" onclick="sort()">
+          
+          Sort
+        </button>
+
+        <button style="color: red;background-color: rgb(110, 196, 253); border: 3px solid gray; border-radius: 10px; margin: 1px; padding: 8px; font-weight: bolder ;" class="reverse" type="button" onclick="reverse()">
+          Reverse
+        </button>
+
+        <button style="color: red;background-color: rgb(110, 196, 253); border: 3px solid gray; border-radius: 10px; margin: 1px; padding: 8px; font-weight: bolder ;" class="blank" type="button" onclick="blank()">
+          Srtip Blank
+        </button>
+
+        <button style="color: red;background-color: rgb(110, 196, 253); border: 3px solid gray; border-radius: 10px; margin: 1px; padding: 8px; font-weight: bolder ;" class="addnumb" type="button" onclick="addnumb()">
+          Add Numbers
+        </button>
+
+        <button style="color: red;background-color: rgb(110, 196, 253); border: 3px solid gray; border-radius: 10px; margin: 1px; padding: 8px; font-weight: bolder ;" class="shuffle" type="button" onclick="shuffle()">
+          Shuffle
+        </button>
+      </div>
+      <script>
+        function clearit() {
+          document.getElementById("magic-input").value = "";
+        }
+        function capitalze() {
+          var uptxt = document.getElementById("magic-input").value;
+          document.getElementById("magic-input").value = uptxt.toUpperCase();
+        }
+         function sort() {
+          var newVal= document.getElementById("magic-input").value;
+          const spltValue = newVal.split('');
+          
+
+          console.log(spltValue); //split value from input
+          
+          console.log(spltValue.sort()) // sorted value
+        
+          const sorted = spltValue.sort(function(a,b){return a - b} )   // a sorted before b
+
+
+          document.getElementById("magic-input").value = spltValue.sort();
+     
+        }
+        function reverse() {
+          var uptxt = document.getElementById("magic-input").value;
+
+          let newVal= '';
+            for(let i = uptxt.length - 1; i>=0; i--){
+              newVal +=uptxt[i]
+            }
+            document.getElementById("magic-input").value =newVal;
+
+
+        }
+        function blank() {
+          var uptxt = document.getElementById("magic-input").value;
+
+          document.getElementById("magic-input").value =uptxt.replace(/\s/g, "");
+        }
+        function addnumb() {
+          var forsort = document.getElementById("magic-input").value;
+          var inputarray = forsort.split("\n");
+          var newarray = "";
+
+          for (var i = 0; i < inputarray.length; i++) {
+            //newarray = newarray + inputarray[i];
+            if (i != inputarray.length - 1) {
+              newarray += i + 1 + ") " + inputarray[i] + "\n";
+            } else {
+              newarray += i + 1 + ") " + inputarray[i];
+            }
+          }
+          document.getElementById("magic-input").value = newarray;
+          console.log("line gula re reverse");
+        }
+        function shuffle() {
+          var forsort = document.getElementById("magic-input").value;
+          var inputarray = forsort.split("\n");
+          var newarray = "";
+          inputarray.sort(function (a, b) {
+            return 0.5 - Math.random();
+          });
+          for (var i = 0; i < inputarray.length; i++) {
+            //newarray = newarray + inputarray[i];
+            if (i != inputarray.length - 1) {
+              newarray = newarray + inputarray[i] + "\n";
+            } else {
+              newarray = newarray + inputarray[i];
+            }
+          }
+          document.getElementById("magic-input").value = newarray;
+          console.log("Random");
+        }
+     
+         
+        
+      </script>
+    </section>
+    <!--Hero Converter Magic End-->
+
+ 
+
+  </body>
+</html>

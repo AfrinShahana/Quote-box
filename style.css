@@ -1,0 +1,271 @@
+body {
+    background-color: rgba(253, 99, 99, 0.438);
+  }
+  h1 {
+    color: aliceblue;
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+    border-radius: 3px solid gray;
+  }
+  
+  /*Quote Box Start*/
+  .quote {
+    margin: auto;
+    width: 80%;
+    height: 500px;
+    /* background-color: rgb(255, 255, 255); */
+    background-color: rgb(233, 227, 227);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+  }
+  .quote:hover{
+    color: rgb(3, 3, 3);
+    width: 85%;
+    height: 505px;
+    background-color: white;
+  }
+  .quote h2:hover{
+    color: #f20000;
+  }
+  .quobox p:hover{
+    color: #fffbfb;
+  }
+  .quote .quobox {
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    height: auto;
+    font-weight: bold;
+    border: 5px solid rgb(95, 97, 95);
+    border-radius: 5px;
+
+    /* background-color: rgb(241, 225, 2); */
+    background-color: rgb(182, 231, 238);
+    color: red;
+    font-size: 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+
+    
+    
+    /* border-radius: 19%; */
+  }
+  
+  .button {
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* border-radius: 88px; */
+  }
+  .butn1:hover{
+    padding: 17px 34px;
+
+  }
+  .butn2:hover{
+    padding: 17px 34px;
+
+  }
+  .butn3:hover{
+    padding: 17px 34px;
+
+  }
+  .butn4:hover{
+    padding: 17px 34px;
+
+  }
+
+  
+  /* Button Desing Start */
+  .butn1 {
+    background-color: #76ef00; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border: 3px solid #939697;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 20px;
+  }
+  
+  .butn2 {
+    background-color: #1a9fe4;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border: 3px solid #939697;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 20px;
+  }
+  
+  .butn3 {
+    background-color: #f25a1d;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border: 3px solid #939697;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 20px;
+  }
+  
+  .butn4 {
+    background-color: #f20000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border: 3px solid #939697;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 20px;
+  }
+  
+  /* Button Desing End*/
+  
+  /*Quote Box End*/
+  
+  /*Converter Box Start*/
+  .convertar {
+    margin: auto;
+    width: 40%;
+    height: 200px;
+    background-color: rgb(233, 227, 227);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .convertar h2{
+    background-color: #f25a1d;
+
+  }
+  .convertar:hover {
+    margin: auto;
+    width: 45%;
+    height: 200px;
+    background-color: white;
+    cursor: pointer;
+  }
+  /*Converter Box End*/
+  
+  /*Min MAx Box Start*/
+  .minmax {
+    margin: auto;
+    width: 50%;
+    height: 500px;
+    background-color: rgb(233, 227, 227);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    cursor: pointer;s
+  }
+  .minmax:hover {
+    margin: auto;
+    width: 55%;
+    height: 505px;
+    background-color: white;
+  
+  }
+  .minmaxsum {
+    text-align: center;
+  }
+  .minmaxsum h2 {
+    background-color: #f25a1d;
+  }
+  /*Min MAx Box End*/
+  
+  /*magic Box Design Start*/
+  .magic {
+    margin: auto;
+    width: 90%;
+    height: 500px;
+    background-color: rgb(233, 227, 227);
+    border-radius: 19px;
+    margin: 39px;
+    padding: 30px;
+    /* background-color: rgb(255, 255, 255); */
+    cursor: pointer;
+
+  }
+  .magic:hover {
+    margin: auto;
+    width: 93%;
+    height: 503px;
+    background-color: white;
+    
+
+    /* background-color: rgb(255, 255, 255); */
+  }
+
+  .magicbox {
+    margin: auto;
+    width: 60%;
+    height: 400px;
+    background-color: rgb(250, 199, 199);
+    border: 3px solid #1df101;
+    /* background-color: rgb(255, 232, 161);
+    border: 3px solid #006a71; */
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+  h1{
+    color: #939697;
+    background-color: rgb(252, 243, 243);
+  }
+  h2{
+    color: rgb(250, 25, 25);
+    border-radius: 3px solid gray;
+  }
+
+  .functionbutton {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  
+  #magic-input {
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: #0d1b2a;
+    font-size: 1.3rem;
+    letter-spacing: 0.25rem;
+    background-color: #f1f1f1;
+    outline: none;
+    transition: 0.4s;
+    resize: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+
+  }
+  
